@@ -11,6 +11,6 @@ for i=1:size
 end
 signal
 encodedSignal
-
+%REMEMBER TO SCRAMBLE REAL SCRAMBLE, NOT LOCAL!!!!!!!!!!
 end
 
