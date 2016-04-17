@@ -1,0 +1,27 @@
+function [ encodedSignal ] = EncodeV34Signal( scrambler,signal,data_size,scrambler_size)
+%TEST
+%
+
+encodedSignal = signal;
+for i=1:size
+    last_value = scrambler(size);
+    second_value = scrambler(18);
+    
+    encodedSignal(i) = xor(xor(last_value,second_value),signal(i));
+    scrambler = RevalueV34Scrambler(scrambler,size,encodedSignal(i));
+end
+signal
+encodedSignal
+
+
+[zera,jedynki] = zlicz(encodedSignal);
+
+figure(1)
+hist(zera, 1:15)
+title('zera')
+figure(2)
+hist(jedynki,1:15)
+title('jedynki');
+
+end
+
