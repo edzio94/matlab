@@ -10,11 +10,8 @@ for i=data_size:-1:1
     if onSignal == true
     encodedSignal(i) = xor(xor(last_value,second_value),signal(i));
     scrambler = RevalueV34Scrambler(scrambler,scrambler_size,encodedSignal(i));
-   
-    else
-    encodedSignal(i) = 0;    
     end
-
+    
 end
 signal;
 encodedSignal;
