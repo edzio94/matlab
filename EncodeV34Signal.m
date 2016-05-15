@@ -1,6 +1,7 @@
 function [ encodedSignal ] = EncodeV34Signal( scrambler,signal,data_size,scrambler_size)
 %TEST
 %
+mySignal
 
 encodedSignal = signal;
 for i=1:data_size

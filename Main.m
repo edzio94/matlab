@@ -88,3 +88,6 @@ title('JEDYNKI | SAME JEDYNKI | DVB');
 
 %SIGNAL = EncodeV34Signal(SCRAMBLER,SIGNAL,15)
 %SCRAMBLER = RevalueScrambler(SCRAMBLER,15)
+
+
+%
