@@ -12,7 +12,7 @@ for i=data_size:-1:1
     scrambler = RevalueV34Scrambler(scrambler,scrambler_size,encodedSignal(i));
    
     else
-    encodedSignal(i) = 0;    
+    encodedSignal(i) = -1;    
     end
 
 end
