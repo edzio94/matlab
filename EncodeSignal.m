@@ -14,17 +14,18 @@ for i=data_size:-1:1
         if  i == B(j)
         disp('Signal lost');
         onSignal = false;
+        
         end
     end
     
-        onSignal = checkUniqueSignal(i,signal,onSignal);
+        [onSignal] = checkUniqueSignal(i,signal,onSignal);
     
     if onSignal == true
     encodedSignal(i) = xor(encodedSignal(i),xor(lastValue,preLastValue));
     scrambler = RevalueScrambler(scrambler,scrambler_size);
     else
         encodedSignal(i) = -1;
-        scrambler = RevalueScrambler(scrambler,scrambler_size);
+        %scrambler = RevalueScrambler(scrambler,scrambler_size);
     end
     
 end

@@ -1,4 +1,4 @@
-DATA_SIZE = 500;
+DATA_SIZE = 5000;
 SIGNAL = randi([0 1],1,DATA_SIZE);
 
 %for i = 1:10
